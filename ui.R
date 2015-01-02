@@ -24,7 +24,8 @@ shinyUI(fluidPage(
                               label = 'Variable',
                               choices = list('depth', 'mag'),
                               selected = 'depth'),
-                  dateRangeInput('date', 'dateRange', start = '2014-12-01', end = '2015-01-02')
+                  dateRangeInput('date', 'dateRange', start = '2014-12-01', end = '2015-01-02'),
+                  plotOutput("hist", height = 200)
     )
 )
 )

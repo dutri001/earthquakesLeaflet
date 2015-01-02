@@ -20,6 +20,14 @@ shinyServer(function(input, output, session) {
         
     })
     
+    output$hist <- renderPlot({
+        hist(time()[,column()],
+             main = 'Distribution',
+             xlab = input$variable,
+             col = '#00DD00',
+             border = 'white')
+    })
+    
     map <- createLeafletMap(session, "map")
     
     observe({
